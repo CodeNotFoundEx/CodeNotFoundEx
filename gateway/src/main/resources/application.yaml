@@ -1,0 +1,6 @@
+server:
+    port: 8080
+    forward-headers-strategy: native # trying to avoid invalid credentials issue in k8s when using ingress from a browser
+spring:
+  application:
+    name: gateway
