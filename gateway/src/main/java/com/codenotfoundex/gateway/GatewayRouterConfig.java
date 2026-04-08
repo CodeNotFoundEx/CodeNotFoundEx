@@ -13,10 +13,10 @@ public class GatewayRouterConfig {
     RouteLocator gatewayRouter(RouteLocatorBuilder builder, TokenRelayGatewayFilterFactory tokenRelay) {
         return builder.routes()
                 .route("greetings-service", r -> r
-                        .path("/api/greetings")
+                        .path("/api/greetings/**")
                         .uri("http://localhost:8081"))
                 .route("greetings-secret", r -> r
-                        .path("/api/secret")
+                        .path("/api/secret/**")
                         .filters(f->f.filter(tokenRelay.apply()))
                         .uri("http://localhost:8081"))
                 .build();
