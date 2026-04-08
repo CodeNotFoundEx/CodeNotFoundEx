@@ -11,3 +11,4 @@
    - CONS:
       1. **Microservices Management**: Everything is in one git repository. 
       2. **AI Context**: AI context can get overflown when you have multiple microservices that do not have a clear boundaries.
+        > **Christian Tzolov**: "Agents are only as useful as what they remember — conversation history alone isn't enough. When the window fills, important facts get evicted." [Blog Link](https://spring.io/blog/2026/04/07/spring-ai-agentic-patterns-6-memory-tools)
