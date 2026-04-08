@@ -17,7 +17,7 @@ spring:
           oidc-client:
             registration:
               client-id: "oidc-client"
-              client-secret: "{noop}secret"
+              client-secret: "{bcrypt}$2a$10$yJ6.SWuLb1Ps4GTyrzdZReSdFH9kAltY4o9DEK.0zNy7Nk33pUYT2"
               client-authentication-methods:
                 - "client_secret_basic"
               authorization-grant-types:
@@ -26,6 +26,7 @@ spring:
                 - "client_credentials"
               redirect-uris:
                 - "http://127.0.0.1:8080/login/oauth2/code/oidc-client"
+                - "http://localhost:8080/login/oauth2/code/oidc-client"
               post-logout-redirect-uris:
                 - "http://127.0.0.1:8080/"
               scopes:
