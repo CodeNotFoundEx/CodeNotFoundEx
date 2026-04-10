@@ -19,6 +19,10 @@ public class GatewayRouterConfig {
                         .path("/api/secret/**")
                         .filters(f->f.filter(tokenRelay.apply()))
                         .uri("http://localhost:8081"))
+                .route("micro", r -> r
+                        .path("/api/**")
+                        .filters(f->f.filter(tokenRelay.apply()))
+                        .uri("http://localhost:8081"))
                 .build();
     }
 }

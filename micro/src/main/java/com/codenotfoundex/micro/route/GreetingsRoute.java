@@ -9,13 +9,15 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 @Configuration
 public class GreetingsRoute {
     @Bean
-    public RouterFunction<ServerResponse> greetings() {
+    public RouterFunction<ServerResponse> greetings(ApiHandler apiHandler) {
 
 
         return RouterFunctions.route()
                 .path("/api", b -> b
                         .GET("/greetings", request -> ServerResponse.ok().bodyValue("Hello, World!"))
-                        .GET("/secret", request -> ServerResponse.ok().bodyValue("Secret")))
+                        .GET("/secret", request -> ServerResponse.ok().bodyValue("Secret"))
+                        .GET("/user", apiHandler::user)
+                )
                 .build();
 
 
