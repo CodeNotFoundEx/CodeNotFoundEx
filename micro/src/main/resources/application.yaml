@@ -8,3 +8,9 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: ${AUTH_EXTERNAL_ISSUER_URI:http://localhost:9000}
+  codec:
+    max-in-memory-size: 10MB
+
+anthropic:
+  api-key: ${ANTHROPIC_API_KEY:}
+  model: claude-sonnet-4-6

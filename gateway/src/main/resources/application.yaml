@@ -21,3 +21,5 @@ spring:
               - openid
               - profile
               - user.read
+  codec:
+    max-in-memory-size: 10MB

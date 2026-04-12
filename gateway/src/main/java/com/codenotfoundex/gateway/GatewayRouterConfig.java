@@ -15,6 +15,9 @@ public class GatewayRouterConfig {
                 .route("greetings-service", r -> r
                         .path("/api/greetings/**")
                         .uri("http://localhost:8081"))
+                .route("cv-service", r -> r
+                        .path("/api/cv/**")
+                        .uri("http://localhost:8081"))
                 .route("greetings-secret", r -> r
                         .path("/api/secret/**")
                         .filters(f->f.filter(tokenRelay.apply()))
