@@ -5,7 +5,7 @@
 **StackOverflow:** [moldovean](https://stackoverflow.com/users/959876/moldovean) || **Github:** [avrabie](https://github.com/avrabie) ||
 **Blog:** [blog.s4v3.net](https://blog.s4v3.net)
 
----
+------
 
 ## Professional Summary
 
