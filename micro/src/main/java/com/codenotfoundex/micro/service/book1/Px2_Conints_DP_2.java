@@ -7,6 +7,7 @@ public class Px2_Conints_DP_2 {
 
     static int[] mem;
     static int[] choice;
+    private static final int INF = Integer.MAX_VALUE - 100;;
 
 
     static void main() {
@@ -15,42 +16,32 @@ public class Px2_Conints_DP_2 {
         choice = new int[sum + 1];
         Arrays.fill(mem, -1);
         Arrays.fill(choice, -1);
+
         int sol = solve(sum);
         System.out.println(sol);
+        printCoins(sum);
+
+    }
+
+    private static void printCoins(int sum) {
+        if(choice[sum] == -1) {
+            System.out.println("No solution");
+            return;
+        }
         System.out.println("Coins used:");
         int iaka = sum;
         while (iaka > 0) {
             System.out.println(choice[iaka]);
             iaka -= choice[iaka];
         }
-        System.out.println("All values for choice");
-        for (int i = 0; i < choice.length; i++) {
-            if(choice[i] != -1) {
-                System.out.println(i + ": " + choice[i]);
-            }
-        }
-
-
-
     }
 
     private static int solve(int sum) {
+        if (sum == 0) return 0;
+        if (sum < 0) return INF;
+        if (mem[sum] != -1) return mem[sum];
 
-        if (sum == 0) {
-            return 0;
-        }
-        if (sum < 0) {
-            return Integer.MAX_VALUE - 100;
-        }
-        ;
-        if (mem[sum] != -1) {
-            return mem[sum];
-        }
-
-
-        int tsol = Integer.MAX_VALUE - 100;
-
-
+        int tsol = INF;
         int marginalCoin = -1;
         for (int i = coins.length - 1; i >= 0; i--) {
             int solSolved = solve(sum - coins[i]) + 1;
