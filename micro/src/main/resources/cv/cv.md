@@ -181,11 +181,10 @@
 ---
 
 ### MoldATSA SE
-**Role:** Software Consultant, Head of Strategy  
+**Role:** Consilier, Head of Strategy and Development
 **Duration:** 2010 – 2014
 
 - Led integration of air traffic management systems.
-- Managed team of 5 engineers.
 - Built forecasting models using R and Python.
 - Developed contingency and cost optimization plans.
 - Worked with European Commission and EUROCONTROL.
@@ -201,6 +200,7 @@
   (Computer Science & Economics)
 
 - **Exchange Program** – Clemson University (USA) (2004 – 2005)
+- **ASEM** - Licentiat in Economie: REI (eng) (2002 - 2006)
 
 ---
 
