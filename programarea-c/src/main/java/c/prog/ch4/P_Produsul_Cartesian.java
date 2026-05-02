@@ -2,9 +2,11 @@ package c.prog.ch4;
 
 public class P_Produsul_Cartesian {
     static void main() {
-        int[] L = {3, 2, 3, 2};
-        int n = L.length;
 
+        int[] L = {3, 2, 3, 2};
+
+
+        int n = L.length;
         int[] E = new int[n];
         int i, count=0;
         boolean done = false;
