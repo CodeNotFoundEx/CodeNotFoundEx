@@ -3,9 +3,9 @@ package c.prog;
 public class Knapsack_P {
     static int[][] dp;
     static void main() {
-        int[] weights = { 3, 1, 2, 2, 3};
-        int[] values = { 15, 4, 8, 10, 11 };
-        int capacity = 9;
+        int[] weights = { 3, 1, 2, 2};
+        int[] values = { 15, 4, 8, 10 };
+        int capacity = 5;
 
         int items = weights.length;
         dp = new int[items + 1][capacity + 1];
