@@ -1,0 +1,31 @@
+public class QualityGateProcessor {
+    public String calculateQualityScore(int bugs, int smells, double coverage, int cyclomatic) {
+        int issueScore = 0;
+
+        if (bugs > 5) {
+            issueScore += 50;
+        } else if (bugs > 0) {
+            issueScore += 20;
+        }
+
+        if (smells > 15) {
+            issueScore += 30;
+        }
+
+        if (coverage < 0.80) {
+            issueScore += 40;
+        }
+
+        if (cyclomatic > 10) {
+            issueScore += 25;
+        }
+
+        if (issueScore > 100) {
+            return "FAILED_CRITICAL";
+        } else if (issueScore > 50) {
+            return "WARNING";
+        } else {
+            return "PASSED";
+        }
+    }
+}
